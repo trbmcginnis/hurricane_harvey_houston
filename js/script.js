@@ -18,8 +18,8 @@ $(function() {
 
 
     // set basemap as Carto tile Layer
-    var CartoDBTiles = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
-    attribution: 'Map Data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> Contributors, Map Tiles &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+    var CartoDBTiles = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',{
+    attribution: 'Map Data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> Contributors, Map Tiles &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'
     });
 
     // add these tiles to the map
@@ -35,9 +35,9 @@ $(function() {
     $("#btnDis").click(function () {
 
         var map = L.map('map').setView([51.49521, -0.10062], 9);
-        L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
             maxZoom: 18,
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>'
+            attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://cloudmade.com">CloudMade</a>'
         }).addTo(map);
     });
 });
@@ -429,7 +429,7 @@ map.on('zoomend', function(){
 
 //Select polygon Layer of population growth 2012-2017 by block group from ArcGIS API
 var Pop_Growth = L.esri.featureLayer({
-    url: 'http://services.arcgisonline.com/arcgis/rest/services/Demographics/USA_Projected_Population_Change/MapServer/1',
+    url: 'https://services.arcgisonline.com/arcgis/rest/services/Demographics/USA_Projected_Population_Change/MapServer/1',
     style: function (feature) {
         return {
         fillColor: null,//getColorPop(feature.properties.POPGRWCYFY),
