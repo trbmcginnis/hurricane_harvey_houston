@@ -61,37 +61,9 @@ body {
     opacity: 0.7;
 }
 
-#Cypress {
-    border: none;
-    background-color: inherit;
-    padding: 5px 5px;
-    font-size: 90%;
-    cursor: pointer;
-    display: inline-block;
-}
-
-#Cypress:hover {background: #eee;}
 
 
-#Cypress {color: red;}
 
-#boop {
-    font-size: 70%;
-}
-
-#Get_Started {
-    border: none;
-    background-color: inherit;
-    padding: 5px 5px;
-    font-size: 90%;
-    cursor: pointer;
-    display: inline-block;
-}
-
-#Get_Started:hover {background: #eee;}
-
-
-#Get_Started {color: blue;}
 
 
 

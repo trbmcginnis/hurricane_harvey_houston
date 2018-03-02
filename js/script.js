@@ -43,23 +43,7 @@ $(function() {
 });
 
 
-    $(window).on('load',function(){
-        $('#myModal').modal('show');
-    });
 
-    $(document).ready(function(){
-    $("#close_panel").click(function(){
-        map.setZoom(9);
-        console.log("Close Panel");
-    });
-});
-
-    $(document).ready(function(){
-    $("#take_look").click(function(){
-        map.setZoom(9);
-        console.log("Take Look");
-    });
-});
 
 
 var HomeControl =  L.Control.extend({
@@ -348,7 +332,6 @@ map.on('zoomend', function() {
 });
 
 
-
 //Select polygon layer for Land Use Changes from ArcGIS API
 var Land_Use_Changes = L.esri.featureLayer({
     url: 'https://gis.h-gac.com/arcgis/rest/services/Land_Use/Announced_Changes/MapServer/0', 
@@ -469,6 +452,24 @@ var oldId;
       opacity: 1
     });
   });
+
+      $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+
+    $(document).ready(function(){
+    $("#close_panel").click(function(){
+        map.setZoom(9);
+        console.log("Close Panel");
+    });
+});
+
+    $(document).ready(function(){
+    $("#take_look").click(function(){
+        map.setZoom(9);
+        console.log("Take Look");
+    });
+});
 
 
 
