@@ -445,7 +445,7 @@ var oldId;
 
   Pop_Growth.on('mouseover', function(e){
     oldId = e.layer.feature.id;
-    document.getElementById('info-pane').innerHTML = '<strong>Pop. Growth 2000-2010:</strong>' + e.layer.feature.properties.POPGRW0010 + '% <br> <strong>Pop. Growth 2010-2012:</strong>' + e.layer.feature.properties.POPGRW10CY + '% <br><strong>Pop. Growth 2012-2017:</strong>' + e.layer.feature.properties.POPGRWCYFY + '%';
+    document.getElementById('info-pane').innerHTML = '<strong>Pop. Growth 2000-2010: </strong>' + e.layer.feature.properties.POPGRW0010 + '% <br> <strong>Pop. Growth 2010-2012: </strong>' + e.layer.feature.properties.POPGRW10CY + '% <br><strong>Pop. Growth 2012-2017: </strong>' + e.layer.feature.properties.POPGRWCYFY + '%';
     Pop_Growth.setFeatureStyle(e.layer.feature.id, {
       color: 'orange',
       weight: 3,
