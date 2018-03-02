@@ -372,9 +372,9 @@ function getColorLand(l, a) {
     }
 
 //Function to bind Popup to each polygon 
-Land_Use_Changes.bindPopup(function (layer) {
+/*Land_Use_Changes.bindPopup(function (layer) {
     return L.Util.template('<p><strong>Current Land Use:</strong> {Label_Current_Land_Use}<br> <strong>Announced Land Use Changes:</strong> {Label_Announced_Changes}<br> <strong>Current Number of Housing Units:</strong> {Housing_Units_Current}<br> <strong>Number of Housing Units by 2045:</strong> {Housing_Units_2045}</p>', layer.feature.properties);
-  }); 
+  }); */
 
 var LandLegend = L.control({position: 'bottomright'});
 //var BuildingsLegend = L.control({position: 'bottomleft'});
