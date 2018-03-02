@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: calc(100vh - 56px);
+}
+
+.Land_Use_Changes {
+    position: absolute;
+    z-index: 500;
+}
+
+.Pop_Growth {
+    position: absolute;
+    z-index: 300;
+}
+
+
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    font-size: 100%;
+}
+.info h4 {
+    margin: 0 0 5px;
+    color: #777;
+    font-size:100%;
+}
+/*
+#info-pane {
+    padding: 10px 20px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+#info-pane h4 {
+    margin: 0 0 5px;
+    color: #777;
+}*/
+
+
+
+.Depthlegend {
+    line-height: 18px;
+    color: #555;
+}
+.Depthlegend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+#Cypress {
+    border: none;
+    background-color: inherit;
+    padding: 5px 5px;
+    font-size: 90%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#Cypress:hover {background: #eee;}
+
+
+#Cypress {color: red;}
+
+#boop {
+    font-size: 70%;
+}
+
+#Get_Started {
+    border: none;
+    background-color: inherit;
+    padding: 5px 5px;
+    font-size: 90%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#Get_Started:hover {background: #eee;}
+
+
+#Get_Started {color: blue;}
+
+
+
+ #info-pane {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 400;
+    padding: 1em;
+    background: white;
+    font-size: 70%;
+
+  }
+
+  svg .legend0 { 
+    fill: #b3d9ff;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legend2 { 
+    fill: #3399ff;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legend4 { 
+    fill: #0073e6;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legend6 { 
+    fill: #0059b3;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legend8 { 
+    fill: #003366;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+
+
+  /*create style for svg custom legends for Land Use Changes polygon layer and Buildings layer*/
+
+svg .legendSvgRes { 
+    fill: #ff9900;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legendSvgVtoRes { 
+    fill: #660066;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legendSvgVtoCom { 
+    fill: #e6e600;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legendSvgComToRes { 
+    fill: #ff3377;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legendSvgOther { 
+    fill: #4d3300;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+svg .legendSvgBuildings { 
+    fill: #b30000;
+    stroke: black; 
+    stroke-width: 1;
+    opacity: 0.75;
+}
+
+
+
+ 

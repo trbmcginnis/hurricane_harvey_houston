@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Harvey and Development</title>
+      <meta charset="utf-8" />
+      <!-- For full screen Leaflet maps, add the following meta tag to set parameters in the viewport-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <!-- Including Leaflet CSS -->
+      <link type="text/css" rel="stylesheet" href="libraries/leaflet-1.2/leaflet.css"/>
+      <!-- Bootstrap styles -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      <!-- Including our custom CSS -->
+      <link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><b><h2><font color='purple'> Harvey and Houston Development Mapping Project</font></h2></b></a>
+           
+          
+          
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!--<div id="info-pane" class="DivOverlay"></div>-->
+
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-8">
+                
+                <div id="map"></div>
+                <div id="info-pane" class="Popup"></div>
+              </div>
+              <div id = "boop" class="col-md-4">
+
+      <br>          
+
+     
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" id="close_panel" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><font color='purple'> Houston Growth and Hurricane Harvey </font></h4>
+      </div>
+      <div class="modal-body">
+        <strong> <font color='purple'>What does this Map Show? </font></strong><br><br>
+
+                       The various neighborhoods throughout Houston experienced different inundation (flood depth) levels during Hurricane Harvey in August 2017. This map displays the inundation level per region during the storm, but keep in mind that the recorded inundation level does not always determine damage rates. This interactive map allows the user to learn more by zooming into a desired neighborhood, and revealing detailed information about the region, including population growth by block group since 2000 and announced land development changes by 2045. These land use changes are divided by residential areas that are growing (increasing the number of housing units), areas that were originally vacant (including farmland) that developers are planning to convert into residences, and the building of commercial and industrial infrastructure on vacant land. <br><br>
+
+                      <strong><font color='purple'> Why is this important?</font></strong><br><br>
+
+                      Experts continue to point to accelerated development and climate change as two of the main reasons why Harvey's effects were so severe. The increased construction of residential and commercial spaces over wetlands and prairies that are important for absorbing water and diminishing the effects of flooding has led to more property damage than previous flooding events. Developers are also continuing to build and sell houses to new residents in highly flood-prone areas, resulting in an increased number of displaced people after hurricanes. <br><br>
+
+                      This map looks closely at small-scale growth occurring throughout Harris County, and examines how developers are planning to change the city by 2045, sometimes in areas that are highly susceptible to floods. <br><br>
+
+                      <strong><font color='purple'> Limitations and Future Goals</font></strong><br><br>
+
+                      The goals of this project are to monitor the ways in which small-scale development throughout the city of Houston may play a role in the amplified effects of flooding on the city's residents. Due to the scope of this project and data made available, the project does not seek to act as an official guide to flood-causing factors and cannot answer the question of why certain areas are more flood-prone. Instead, this map provides viewers with a glimpse into a rapidly growing city and its relationship with tropical storms. Development plans are likely to change from those included in this project, as these plans were last updated in 2015. As Houston recovers from Harvey, it is unknown whether developers will refrain from building on flood-prone areas or if new residents will be less likely to buy homes in these neighborhoods. A further exploration into a number of other factors that may have contributed to the estimated damage will help to build a better picture of Houston's ability to prepare for another flood. <br><br>
+
+                      <strong><font color='purple'> Data Included in the Project</font></strong> <br> <br>
+
+                     
+                      <a href= https://services.arcgis.com/lqRTrQp2HrfnJt8U/ArcGIS/rest/services/CTAsummary4/FeatureServer>Inundation Depth by neighborhood</a><br>
+                      <a href= https://services1.arcgis.com/Hp6G80Pky0om7QvQ/arcgis/rest/services/FEMA_Damage_Assessments_Harvey_20170829/FeatureServer>Damage Assessment by FEMA</a><br>
+                      <a href=https://gis.h-gac.com/arcgis/rest/services/Land_Use/Announced_Changes/MapServer/0>Announced Land Use Changes 2045 through the Houston-Galveston Area Council (H-GAC)</a><br>
+                      <a href=http://services.arcgisonline.com/arcgis/rest/services/Demographics/USA_Projected_Population_Change/MapServer>Population Change 2000-2010, 2010-2012, 2012-2017</a> <br><br>
+
+                      <strong><font color='purple'> Interested in Learning More?</font></strong> <br><br>
+
+                       <a href =https://projects.propublica.org/houston-cypress>Propublica Report on Houston Flooding with Emphasis on Cypress Neighborhood</a><br>
+                      <a href=https://www.hcfcd.org/interactive-mapping-tools/harris-county-flood-education-mapping-tool/>Harris County Flood Control District(HCFCD) Flood Education Mapping Tool</a><br>
+                      <a href=http://www.datahouston.org/Map.html>Houston Interactive Maps by Houston Community Data Connections (HCDC)</a><br>
+                      <a href=http://www.houstonchronicle.com/news/houston-texas/houston/article/Houston-s-development-boom-and-reduction-of-8403838.php>The Houston Chronicle on the Dangers of Development</a><br>
+                      <a href=https://www.texastribune.org/hell-and-high-water/> ProPublica and the Texas Tribune on Why Houston isn't Ready for the Next Hurricane</a><br>
+                      <a href=https://www.revealnews.org/episodes/the-perfect-storm/> Reveal Podcast on Houston and Hurricanes</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="take_look" class="btn btn-outline-secondary" data-dismiss="modal">Let's take a look at the map!</button>
+      </div>
+    </div>
+  </div>
+</div>
+                <!--<div><p id=p1>"Hello"</p></div>-->
+                <!--<button id="PopBtn" type="button" class="btn btn-warning">Pop Growthd</button>-->
+                <!--<button id="PopBtn" type="button" class="btn btn-danger">Pop Growth</button>-->
+                <!--<div id="somethingElse"></div>-->
+
+
+<div class="text-justified">
+
+  
+
+<h4><font color='purple'> How to Use the Map </font> </h4>
+
+                <br><br>*Click on a neighborhood to zoom in to its boundaries.<br><br>*Hover over a FEMA Damage Assessment "damaged buildings cluster" <img src="data/Cluster_Icon.jpg" width="30" height="30"> to reveal its boundaries.<br><br>*Click on a "damaged buildings cluster"<img src="data/Cluster_Icon.jpg" width="30" height="30"> to zoom in and break down the cluster.<br><br>*Press the <img src="https://image.freepik.com/free-icon/multiple-users-silhouette_318-49546.jpg" width="20" height="20"> button to zoom in and reveal population growth data by block group (similar to census tracts) as well as future land development proposals for 2045.<br><br>*After zooming in or pressing <img src="https://image.freepik.com/free-icon/multiple-users-silhouette_318-49546.jpg" width="20" height="20"> over the desired location, you can hover over block group boundaries to reveal population growth percentages OR click on a land parcel to reveal development information. <br><br>*Press the <img src="https://image.flaticon.com/icons/svg/23/23665.svg" width="20" height="20"> button to return to the original map.<br><br><br><br> 
+
+
+
+   <a href="#Cypress_Modal" data-toggle="modal" data-target="#Cypress_Modal"><b>Cypress North</a> demonstrates an example of a neighborhood with a particularly dangerous relationship between flooding and development.</b><br>
+
+                <!--Example of a dangerous trend: <button data-toggle="collapse" id="Cypress_Button" data-target="#Cypress">Cypress North</button>-->
+
+                  <!-- Modal -->
+  <div class="modal left fade" id="Cypress_Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel"><font color='purple' align='left'>Cypress North</font></h4>
+        </div>
+
+        <div class="modal-body">
+          <p> 
+              The Cypress North neighborhood (mid-west Houston) demonstrates an example of the dangerous trend of real estate development on flood-prone land. The residents of Cypress have experienced <a href = https://projects.propublica.org/houston-cypress/> repeated damage to their homes </a> from years of seasonal flooding. Cypress stands out in the scope of this project because it marks an area that has experienced a high influx of new residents since 2000 and will experience significant real estate development by 2045, despite the increasing risk that these properties will be flooded. After selecting the neighborhood, press the <img src="https://image.freepik.com/free-icon/multiple-users-silhouette_318-49546.jpg" width="20" height="20"> button or zoom in to see population growth and future development.
+          </p>
+        </div>
+
+              <div class="modal-footer">
+        <button type="button" id="Show_Cypress" class="btn btn-outline-secondary" data-dismiss="modal">Take me to Cypress North</button>
+
+      </div>
+
+
+
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
+           
+               
+
+
+         <br><a href="#myModal" data-toggle="modal" data-target="#myModal"><b>Click Here</a> to learn more about this project</b>                  
+
+              
+
+          
+              </div>
+
+            </div>
+          </div>
+
+ 
+
+
+
+
+
+
+            </div>
+          </div>
+
+  
+ 
+
+
+
+  </body>
+    <!-- Including Leaflet Javascript Library -->
+    <!--<script type="text/javascript" src="libraries/leaflet-1.2/leaflet.js"></script>
+
+
+   <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+
+
+    <!-Leaflet marker cluster plugins-->
+
+  <!-- Load Leaflet from CDN-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/leaflet/1.0.0-rc.3/leaflet-src.js"></script> 
+ 
+  <!-- Load Esri Leaflet from CDN -->
+  <script src="http://cdn.jsdelivr.net/leaflet.esri/2.0.2/esri-leaflet.js"></script> 
+ 
+  <!-- Include Leaflet.markercluster via rawgit.com
+in production you'd be better off hosting these libraries yourself -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-rc.1/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-rc.1/dist/MarkerCluster.css">
+  <script src="https://cdn.rawgit.com/Leaflet/Leaflet.markercluster/v1.0.0-rc.1/dist/leaflet.markercluster.js"></script> 
+ 
+ 
+  <!-- Load Clustered Feature Layer from CDN -->
+  <script src="https://cdn.jsdelivr.net/leaflet.esri.cluster/2.0.0/esri-leaflet-cluster.js"></script> 
+
+
+
+ 
+
+ <!--bootstrap plugins-->
+
+    <script src="https://unpkg.com/esri-leaflet@2.1.1/dist/esri-leaflet.js"
+    integrity="sha512-ECQqaYZke9cSdqlFG08zSkudgrdF6I1d8ViSa7I3VIszJyVqw4ng1G8sehEXlumdMnFYfzY0tMgdQa4WCs9IUw=="
+    crossorigin=""></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+    <!-- Including our custom Javascript -->  
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+
+</html>
