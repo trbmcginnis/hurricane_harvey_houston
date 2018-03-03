@@ -72,8 +72,31 @@ $(function() {
     });
 
 
+/*
+var Get_Started_Control = L.Control.extend({
+    options: {
+        position:'topright'
+    },
 
+    onAdd: function(map) {
+        var Start_container = L.DomUtil.create('div','leaflet-bar leaflet-control leaflet-control-custom');
+        Start_container.type= "button";
+        Start_container.style.backgroundColor = 'white';
+        Start_container.style.backgroundSize="200px 200px";
+        Start_container.style.width= '200px';
+        Start_container.style.height='200px';
 
+        Start_container.onclick = function(){
+            map.setZoom(9);
+            map.removeControl(Start_container);
+
+        }
+
+        return Start_container;
+    }
+});*/
+
+/*map.addControl(new Get_Started_Control());*/
 
 
 

@@ -35,7 +35,7 @@ body {
     color: #777;
     font-size:100%;
 }
-/*
+
 #info-pane {
     padding: 10px 20px;
     font: 14px/16px Arial, Helvetica, sans-serif;
@@ -44,10 +44,7 @@ body {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
 }
-#info-pane h4 {
-    margin: 0 0 5px;
-    color: #777;
-}*/
+
 
 
 
@@ -79,6 +76,8 @@ body {
     font-size: 70%;
 
   }
+
+
 
   svg .legend0 { 
     fill: #b3d9ff;
