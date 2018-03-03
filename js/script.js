@@ -18,6 +18,8 @@ $(function() {
     });
 });
 
+
+
     $(document).ready(function(){
     $("#take_look").click(function(){
         map.setZoom(9);
