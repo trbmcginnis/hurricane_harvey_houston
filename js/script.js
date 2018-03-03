@@ -2,6 +2,28 @@
 
 
 $(function() {
+
+
+
+    $(window).on('load',function(){
+    $('#myModal').modal('show');
+    });
+
+
+
+    $(document).ready(function(){
+    $("#close_panel").click(function(){
+        map.setZoom(9);
+        console.log("Close Panel");
+    });
+});
+
+    $(document).ready(function(){
+    $("#take_look").click(function(){
+        map.setZoom(9);
+        console.log("Take Look");
+    });
+});
     
     var lat = 29.76;
     var lng = -95.37;
@@ -41,6 +63,13 @@ $(function() {
         }).addTo(map);
     });
 });
+
+    $(window).on('load',function(){
+        map.setZoom(9);
+        console.log('WORKINGGG');
+    });
+
+
 
 
 
@@ -453,23 +482,7 @@ var oldId;
     });
   });
 
-      $(window).on('load',function(){
-        $('#myModal').modal('show');
-    });
 
-    $(document).ready(function(){
-    $("#close_panel").click(function(){
-        map.setZoom(9);
-        console.log("Close Panel");
-    });
-});
-
-    $(document).ready(function(){
-    $("#take_look").click(function(){
-        map.setZoom(9);
-        console.log("Take Look");
-    });
-});
 
 
 
