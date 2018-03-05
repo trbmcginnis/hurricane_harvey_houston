@@ -66,10 +66,7 @@ $(function() {
     });
 });
 
-    $(window).on('load',function(){
-        map.setZoom(9);
-        console.log('WORKINGGG');
-    });
+
 
 
 /*
@@ -96,7 +93,7 @@ var Get_Started_Control = L.Control.extend({
     }
 });*/
 
-/*map.addControl(new Get_Started_Control());*/
+
 
 
 
@@ -107,7 +104,7 @@ var HomeControl =  L.Control.extend({
   },
 
   onAdd: function (map) {
-    var homecontainer = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+    var homecontainer = L.DomUtil.create('input');
 
     homecontainer.type = "button";
     homecontainer.style.backgroundColor = 'white';    
@@ -127,12 +124,7 @@ var HomeControl =  L.Control.extend({
 map.addControl(new HomeControl());
 
 
-$(document).ready(function(){
-    $("#Show_Cypress").click(function(){
-        map.setView([29.99627304975277, -95.6850814819336], 12);
-        console.log("Cypress");
-    });
-});
+
 
 
 
@@ -143,9 +135,10 @@ var PopControl =  L.Control.extend({
   },
 
   onAdd: function (map) {
-    var Popcontainer = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+    var Popcontainer = L.DomUtil.create('input');
 
-    Popcontainer.style.backgroundColor = 'white';     
+    Popcontainer.type='button';
+    Popcontainer.style.backgroundColor = 'red';     
     Popcontainer.style.backgroundImage = "url(https://image.freepik.com/free-icon/multiple-users-silhouette_318-49546.jpg)";
     Popcontainer.style.backgroundSize = "30px 30px";
     Popcontainer.style.width = '30px';
@@ -161,6 +154,15 @@ var PopControl =  L.Control.extend({
 });
 
 map.addControl(new PopControl());
+
+$(document).ready(function(){
+    $("#Show_Cypress").click(function(){
+        map.setView([29.99627304975277, -95.6850814819336], 12);
+        console.log("Cypress");
+    });
+});
+
+
 
 
 var InDepthGeoJSON;
@@ -356,6 +358,53 @@ map.on('zoomend', function() {
     } 
 
 });
+
+
+/*map.addControl(new Get_Started_Control());*/
+
+var customControl =  L.Control.extend({
+
+  options: {
+    position: 'bottomleft'
+  },
+
+  onAdd: function (map) {
+    var container = L.DomUtil.create('input');
+    container.type="button";
+    container.title="Description";
+
+
+
+    container.style.backgroundColor = "#9370DB";     
+    container.style.backgroundImage = "url(Data/Description.png)";
+    container.style.backgroundSize = "500px 100px";
+    container.style.width = '503px';
+    container.style.height = '100px';
+    
+    container.onmouseover = function(){
+      container.style.backgroundColor = '#4B0082'; 
+    }
+    container.onmouseout = function(){
+      container.style.backgroundColor ="#9370DB";
+    }
+
+
+    container.onclick = function(){
+      console.log('buttonClicked');
+      map.setZoom(10);
+      //container.style.backgroundSize = "0px 0px";
+    //container.style.width = '0px';
+    //container.style.height = '0px';
+    $(this).hide('slow');
+    }
+
+    return container;
+  }
+});
+
+
+
+  map.addControl(new customControl());
 
 
  
