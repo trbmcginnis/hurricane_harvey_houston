@@ -372,11 +372,11 @@ var customControl =  L.Control.extend({
     var container = L.DomUtil.create('input');
     container.type="button";
     container.title="Description";
+    container.value="Welcome to the Harvey and Development mapping tool. Click here to get started!";
 
 
 
     container.style.backgroundColor = "#9370DB";     
-    container.style.backgroundImage = "url(Data/Description.jpg)";
     container.style.backgroundSize = "500px 100px";
     container.style.width = '503px';
     container.style.height = '100px';
