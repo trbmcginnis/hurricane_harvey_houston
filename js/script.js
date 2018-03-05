@@ -376,7 +376,7 @@ var customControl =  L.Control.extend({
 
 
     container.style.backgroundColor = "#9370DB";     
-    container.style.backgroundImage = "url(Data/Description.png)";
+    container.style.backgroundImage = "url(Data/Description.jpg)";
     container.style.backgroundSize = "500px 100px";
     container.style.width = '503px';
     container.style.height = '100px';
